@@ -1,3 +1,4 @@
+import React from "react";
 import { useEffect, useState } from "react";
 import { Routes, Route } from "react-router-dom";
 import LoadingComponent from "./components/Loading";
@@ -5,6 +6,7 @@ import Navbar from "./components/Navbar/Navbar";
 import { getLoggedIn, logout } from "./services/auth";
 import routes from "./config/routes";
 import * as USER_HELPERS from "./utils/userToken";
+import Footer from "./components/Navbar/Footer";
 
 //pages
 import HomePage from "./pages/HomePage";
@@ -66,6 +68,7 @@ export default function App() {
         <Route path= "/auth/login" element={<LogIn/>} />
         <Route path="/auth/signup" element={<Signup/>}/>
       </Routes>
+      <Footer/>
     </div>
   );
 }
