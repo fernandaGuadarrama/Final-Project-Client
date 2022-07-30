@@ -20,5 +20,11 @@
 .App-link {
   color: #61dafb;
 }
-
+.gold{
+  color:whitesmoke;
+}
+.img-fluid{
+  width: 200vw;
+  height: 400vh;
+}
 

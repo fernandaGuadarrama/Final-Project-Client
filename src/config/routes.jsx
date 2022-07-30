@@ -1,6 +1,8 @@
 import React from "react";
 import { Navigate } from "react-router-dom";
 import HomePage from "../pages/HomePage";
+import Properties from "../pages/Properties";
+import Profile from "../pages/Profile";
 import Login from "../pages/LogIn";
 import Signup from "../pages/Signup";
 import ProtectedPage from "../pages/ProtectedPage";
@@ -12,6 +14,14 @@ const routes = (props) => {
     {
       path: PATHS.HOMEPAGE,
       element: <HomePage {...props} />,
+    },
+    {
+      path: PATHS.PROPERTIES,
+      element: <Properties {...props} />,
+    },
+    {
+      path: PATHS.PROFILE,
+      element: <Profile {...props} />,
     },
     {
       path: PATHS.SIGNUPPAGE,

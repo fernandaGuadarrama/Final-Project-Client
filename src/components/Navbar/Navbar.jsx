@@ -7,7 +7,7 @@ const Navbar = (props) => {
   return (
     <nav> 
   
-<nav className="navbar navbar-expand-lg navbar-light bg-dark">
+<nav className="navbar navbar-expand-lg navbar-dark bg-dark">
   <div className="container-fluid">
     <button
       className="navbar-toggler"
@@ -24,99 +24,37 @@ const Navbar = (props) => {
     <div className="collapse navbar-collapse" id="navbarSupportedContent">
        <a className="navbar-brand mt-2 mt-lg-0" href="#">
         <img
-          src="https://mdbcdn.b-cdn.net/img/logo/mdb-transaprent-noshadows.webp"
-          height="15"
+          src="/Logo.png"
+          width="26"
           alt="MDB Logo"
           loading="lazy"
         />
       </a>
       <ul className="navbar-nav me-auto mb-2 mb-lg-0">
         <li className="nav-item">
-          <a className="nav-link" href="#">Dashboard</a>
+          <Link className="nav-link" to="/">Home</Link>
         </li>
         <li className="nav-item">
-          <a className="nav-link" href="#">Team</a>
+          <Link className="nav-link" to="/auth/signup">Signup</Link>
         </li>
         <li className="nav-item">
-          <a className="nav-link" href="#">Projects</a>
+          <Link className="nav-link" to="/auth/login">Log in</Link>
         </li>
       </ul>
-    </div>
 
-    <div className="d-flex align-items-center">
-      <a className="text-reset me-3" href="#">
-        <i className="fas fa-shopping-cart"></i>
-      </a>
-
-      <div className="dropdown">
-        <a
-          className="text-reset me-3 dropdown-toggle hidden-arrow"
-          href="#"
-          id="navbarDropdownMenuLink"
-          role="button"
-          data-mdb-toggle="dropdown"
-          aria-expanded="false"
-        >
-          <i className="fas fa-bell"></i>
-          <span className="badge rounded-pill badge-notification bg-danger">1</span>
-        </a>
-        <ul
-          className="dropdown-menu dropdown-menu-end"
-          aria-labelledby="navbarDropdownMenuLink"
-        >
-          <li>
-            <a className="dropdown-item" href="#">Some news</a>
-          </li>
-          <li>
-            <a className="dropdown-item" href="#">Another news</a>
-          </li>
-          <li>
-            <a className="dropdown-item" href="#">Something else here</a>
-          </li>
-        </ul>
-      </div>
-      <div className="dropdown">
-        <a
-          className="dropdown-toggle d-flex align-items-center hidden-arrow"
-          href="#"
-          id="navbarDropdownMenuAvatar"
-          role="button"
-          data-mdb-toggle="dropdown"
-          aria-expanded="false"
-        >
           <img
-            src="https://mdbcdn.b-cdn.net/img/new/avatars/2.webp"
+            src="https://pbs.twimg.com/profile_images/1551459684426682369/VR61hq8m_400x400.jpg"
             className="rounded-circle"
             height="25"
-            alt="Black and White Portrait of a Man"
+            alt="Your Profile picture"
             loading="lazy"
           />
-        </a>
-        <ul
-          className="dropdown-menu dropdown-menu-end"
-          aria-labelledby="navbarDropdownMenuAvatar"
-        >
-          <li>
-            <a className="dropdown-item" href="#">My profile</a>
-          </li>
-          <li>
-            <a className="dropdown-item" href="#">Settings</a>
-          </li>
-          <li>
-            <a className="dropdown-item" href="#">Logout</a>
-          </li>
-        </ul>
+          <li className="nav-item">
+          <Link className="nav-link" to="/profile">Your listings...</Link>
+        </li>
       </div>
-    </div>
-  </div>
+        </div>
 </nav>
-{/*             
-           <Link to="/auth/signup" classNameName="authLink">
-              Signup
-            </Link>
-            <Link to="/auth/login" classNameName="authLink">
-              Log In
-            </Link>  */}
     </nav>
   );
 };

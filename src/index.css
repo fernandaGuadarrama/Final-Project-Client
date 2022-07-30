@@ -11,4 +11,11 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-
+.imgText{
+  width: 200px;
+  height: 300px;
+}
+.containertext{
+  padding: 5%;
+  flex-wrap: wrap;
+}

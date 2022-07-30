@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from "react-router-dom";
 import {
   MDBNavbar,
   MDBNavbarNav,
@@ -14,16 +15,16 @@ export default function HomeViews() {
     <header>
       <div
         className='p-5 text-center bg-image'
-        style={{ backgroundImage: "url('https://mdbootstrap.com/img/new/slides/041.webp')", height: 400 }}
+        style={{ backgroundImage: "url('https://maarquitectura.com.mx/wp-content/uploads/2020/04/01-1.jpg')", height: 400 }}
       >
         <div className='mask' style={{ backgroundColor: 'rgba(0, 0, 0, 0.6)' }}>
           <div className='d-flex justify-content-center align-items-center h-100'>
             <div className='text-white'>
-              <h1 className='mb-3' >Build you home</h1>
+              <h1 className='mb-3' >Build your home</h1>
               <h4 className='mb-3'>OWN YOUR FUTURE</h4>
-              <a className='btn btn-outline-light btn-lg' href='#!' role='button'>
+              <Link className='nav-link btn btn-outline-light btn-lg' to="/properties" role='button'>
                 See our properties
-              </a>
+              </Link>
             </div>
           </div>
         </div>

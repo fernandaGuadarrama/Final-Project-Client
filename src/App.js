@@ -12,6 +12,8 @@ import Footer from "./components/Navbar/Footer";
 import HomePage from "./pages/HomePage";
 import LogIn from "./pages/LogIn";
 import Signup from "./pages/Signup";
+import Properties from "./pages/Properties";
+import Profile from "./pages/Profile";
 
 
 export default function App() {
@@ -67,6 +69,8 @@ export default function App() {
         <Route path="/" element= {<HomePage />}/>
         <Route path= "/auth/login" element={<LogIn/>} />
         <Route path="/auth/signup" element={<Signup/>}/>
+        <Route path="/properties" element={<Properties/>}/>
+        <Route path="/profile" element={<Profile/>}/>
       </Routes>
       <Footer/>
     </div>

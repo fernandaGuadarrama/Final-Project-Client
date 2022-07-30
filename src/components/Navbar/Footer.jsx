@@ -9,7 +9,7 @@ import {
 
 export default function Footer() {
   return (
-    <MDBFooter className='bg-light text-center text-white'>
+    <MDBFooter className='bg-light text-center text-white' style={{position:"relative", bottom:"0", width:"100vw"}}>
       <div className='container p-4 pb-0'>
         <section className='mb-4'>
           <a
@@ -65,11 +65,6 @@ export default function Footer() {
             <MDBIcon fab icon='github' />
           </a>
         </section>
-      </div>
-
-      <div className='text-center p-3' style={{ backgroundColor: 'rgba(0, 0, 0, 0.2)' }}>
-        © 2022 Copyright: Fernanda Guadarrama
-        
       </div>
     </MDBFooter>
   );
