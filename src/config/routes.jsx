@@ -7,6 +7,7 @@ import Login from "../pages/LogIn";
 import Signup from "../pages/Signup";
 import ProtectedPage from "../pages/ProtectedPage";
 import * as PATHS from "../utils/paths";
+import Property1 from "../pages/Property1";
 
 const routes = (props) => {
   const { user } = props;
@@ -18,6 +19,10 @@ const routes = (props) => {
     {
       path: PATHS.PROPERTIES,
       element: <Properties {...props} />,
+    },
+    {
+      path: PATHS.PROPERTY1,
+      element: <Property1 {...props} />,
     },
     {
       path: PATHS.PROFILE,

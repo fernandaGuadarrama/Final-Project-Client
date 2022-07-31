@@ -41,71 +41,53 @@ export default function Signup({ authenticate }) {
   }
 
   return (
-    <section className="intro" style={{position:"relative", widht:"100vw", height:"60vh", paddingTop:"3%"}}>
-    <form>
-          <button type="submit" className="btn btn-primary btn-block mb-4">Sign in</button>
-
-<div className="text-center">
-  <p>Not a member? <a href="#!">Register</a></p>
-</div>
-</form>
-  <div className="tab-pane fade" id="pills-register" role="tabpanel" aria-labelledby="tab-register">
-    <form>
-      <div className="text-center mb-3">
-        <p>Sign up with:</p>
-
-      </div>
-
-
-
-      <div className="form-outline mb-4">
-        <input type="text" id="registerName" className="form-control" />
-        <label className="form-label" htmlFor="registerName">Name</label>
-      </div>
-
-
-      <div className="form-outline mb-4">
-        <input type="text" id="registerUsername" className="form-control" />
-        <label className="form-label" htmlFor="registerUsername">Username</label>
-      </div>
-
-
-      <div className="form-outline mb-4">
-        <input type="email" id="registerEmail" className="form-control" />
-        <label className="form-label" htmlFor="registerEmail">Email</label>
-      </div>
-
-
-      <div className="form-outline mb-4">
-        <input type="password" id="registerPassword" className="form-control" />
-        <label className="form-label" htmlFor="registerPassword">Password</label>
-      </div>
-
-
-      <div className="form-outline mb-4">
-        <input type="password" id="registerRepeatPassword" className="form-control" />
-        <label className="form-label" htmlFor="registerRepeatPassword">Repeat password</label>
-      </div>
-
-      <div className="form-check d-flex justify-content-center mb-4">
-        <input
-          className="form-check-input me-2"
-          type="checkbox"
-          value=""
-          id="registerCheck"
-          checked
-          aria-describedby="registerCheckHelpText"
-        />
-        <label className="form-check-label" htmlFor="registerCheck">
-          I have read and agree to the terms
-        </label>
-      </div>
-
-      <button type="submit" className='text-dark me-2' color='light'>Sign in</button>
-    </form>
-  </div>
-
-</section>
+      <>
+      <br/>
+      <br/>
+       <div className="Auth-form-container" style={{ 
+        justifyContent: 'center',
+        display: "flex",
+        alignItems: 'center',
+        alignContent: 'center'}}>
+      <form className="Auth-form">
+        <div className="Auth-form-content">
+          <h1 className="Auth-form-title">Welcome back</h1>
+          <br/>
+          <h4 className="Auth-form-title">Sign In</h4>
+          <br/>
+             <div className="form-group mt-3">
+            <label>Full Name</label>
+            <input
+              type="email"
+              className="form-control mt-1"
+              placeholder="e.g Jane Doe"
+            />
+          </div>
+          
+          <div className="form-group mt-3">
+            <label>Password</label>
+            <input
+              type="password"
+              className="form-control mt-1"
+              placeholder="Password"
+            />
+          </div>
+          <div className="d-grid gap-2 mt-3">
+            <button type="submit" className="btn btn-black">
+              Submit
+            </button>
+          </div>
+          <p className="text-center mt-2">
+            Forgot <a href="#">password?</a>
+          </p>
+        </div>
+      </form>
+    </div>
+    <br/>
+    <br/>
+    </>
+  )
+}
     // <div>
     //   <h1 classNameNameName="signup">Sign Up</h1>
     //   <form onSubmit={handleFormSubmission} classNameNameName="auth__form">
@@ -144,5 +126,4 @@ export default function Signup({ authenticate }) {
     //     </button>
     //   </form>
     // </div>
-  );
-}
+

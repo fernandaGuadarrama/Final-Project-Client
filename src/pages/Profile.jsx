@@ -1,6 +1,15 @@
 import React from 'react';
-import "./Profile.css";
-import { MDBIcon, MDBProgress, MDBProgressBar } from 'mdb-react-ui-kit';
+import { MDBIcon, 
+  MDBProgress, 
+  MDBProgressBar, 
+  MDBCard,
+  MDBCardImage,
+  MDBCardBody,
+  MDBCardTitle,
+  MDBCardText,
+  MDBCardHeader,
+  MDBCardFooter,
+ } from 'mdb-react-ui-kit';
 
 
 export default function Profile() {
@@ -51,17 +60,46 @@ export default function Profile() {
                 <p className="font-italic mb-0">Valle de Bravo Cabanna</p>
               </div>
             </div>
+      {/* Progress shown as cards for each property */}
             <h5>Progress of your properties...</h5>
             <br/>
-                <MDBProgress height='20'>
+            <MDBCard alignment='center'>
+      <MDBCardHeader>Nuevo Vallarta</MDBCardHeader>
+      <MDBCardBody>
+        <MDBCardTitle><h7>House near the beach</h7></MDBCardTitle>
+        <MDBCardImage position='top' alt='...' src='https://cdn.resize.sparkplatform.com/pvr/2048x1600/true/20210217000321548708000000-o.jpg' />
+        <MDBCardText>Spectacular Luxury Villa on small Island in Nuevo Vallarta 7800 ft home includes 4 bedrooms 6 baths large decks with pool and Jacuzzi. 
+        <h5>Progress under the construction:</h5></MDBCardText>
+        <MDBProgress height='20'>
+                <MDBProgressBar striped bgColor='dark' width='50' valuemin={0} valuemax={100}>
+                    50%
+                </MDBProgressBar>
+                </MDBProgress>
+      </MDBCardBody>
+      <MDBCardFooter className='text-muted'>Updated: 10 days ago</MDBCardFooter>
+    </MDBCard>
+    <br/>
+    <br/>
+            <MDBCard alignment='center'>
+      <MDBCardHeader>Valle de Bravo</MDBCardHeader>
+      <MDBCardBody>
+        <MDBCardTitle><h7>Little Cabanna</h7></MDBCardTitle>
+        <MDBCardImage position='top' alt='...' src='https://images.pexels.com/photos/6342356/pexels-photo-6342356.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1' />
+        <MDBCardText>This beautiful development features a spectacular modern architecture with the highest quality of construction and finishes. With a privileged location on the most popular and trendy Valle de Bravo.
+        <h5>Progress under the construction:</h5></MDBCardText>
+        <MDBProgress height='20'>
                 <MDBProgressBar striped bgColor='dark' width='25' valuemin={0} valuemax={100}>
                     25%
                 </MDBProgressBar>
                 </MDBProgress>
+      </MDBCardBody>
+      <MDBCardFooter className='text-muted'>Updated: 20 days ago</MDBCardFooter>
+    </MDBCard>
+
 
             <br/>
             <div className="d-flex justify-content-between align-items-center mb-4">
-              <p className="lead fw-normal mb-0">My properties</p>
+              <p className="lead fw-normal mb-0">My gallery</p>
               <p className="mb-0"><a href="#!" className="text-muted">Show all</a></p>
             </div>
             <div className="row g-2">

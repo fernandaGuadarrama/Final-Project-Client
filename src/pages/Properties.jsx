@@ -7,6 +7,7 @@ import {
   MDBRow,
   MDBIcon,
 } from 'mdb-react-ui-kit';
+import { Link } from 'react-router-dom';
 
 export default function Properties() {
   return (
@@ -27,17 +28,16 @@ export default function Properties() {
         <div className="card">
           <div className="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
             <img src="https://i.pinimg.com/564x/08/55/4d/08554dfa298a4562ef9612addd9107f2.jpg" className="img-fluid" />
-            <a href="#!">
+            <Link to="/property1">
               <div className="mask" style= {{backgroundColor: "rgba(251, 251, 251, 0.15)"}}></div>
-            </a>
+            </Link>
           </div>
           <div className="card-body">
-            <h5 className="card-title">Post title</h5>
+            <h5 className="card-title">Nuevo Vallarta</h5>
             <p className="card-text">
-              Some quick example text to build on the card title and make up the bulk of the
-              card's content.
+              Is an ambisius Green brand new project to be development in approx 4.5 hectares; 9 towers, commercial spaces, lagoon, several pools, yoga areas, paddle and bocce courts, green areas, mango trees, jogging tracks, game spaces, snack bar and much more! This complex will have its own sanitization water treatment for …
             </p>
-            <a href="#!" className="btn btn-dark">Read</a>
+            <Link to="/property1" className="btn btn-dark">See the development</Link>
           </div>
         </div>
       </div>

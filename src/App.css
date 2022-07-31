@@ -27,4 +27,14 @@
   width: 200vw;
   height: 400vh;
 }
+.cotainerLogin{
+  width: 50vw;
+  height: 50vh;
 
+}
+.formHome{
+  width: 25vw;
+  height: 50vh;
+  position: relative;
+  flex-wrap: wrap;
+}

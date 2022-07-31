@@ -5,6 +5,7 @@ import "./Signup";
 import * as PATHS from "../utils/paths";
 import * as USER_HELPERS from "../utils/userToken";
 
+
 export default function LogIn({ authenticate }) {
   const [form, setForm] = useState({
     username: "",
@@ -38,76 +39,62 @@ export default function LogIn({ authenticate }) {
   }
 
   return (
-    <div className="container">
-    <ul className="nav nav-pills nav-justified mb-3" id="ex1" role="tablist">
-  <li className="nav-item" role="presentation">
-    <a
-      className="nav-link active"
-      id="tab-login"
-      data-mdb-toggle="pill"
-      href="#pills-login"
-      role="tab"
-      aria-controls="pills-login"
-      aria-selected="true"
-      >Login</a>
-  </li>
-  <li className="nav-item" role="presentation">
-    <a
-      className="nav-link"
-      id="tab-register"
-      data-mdb-toggle="pill"
-      href="#pills-register"
-      role="tab"
-      aria-controls="pills-register"
-      aria-selected="false"
-      >Register</a></li>
-</ul>
-<div className="tab-content">
-  <div className="tab-pane fade show active" id="pills-login" role="tabpanel" aria-labelledby="tab-login">
-    <form>
-      <div className="text-center mb-3">
-        <p>Sign in with:</p>
-
-      </div>
-
-
-
-      <div className="form-outline mb-4">
-        <input type="email" id="loginName" className="form-control" />
-        <label className="form-label" for="loginName">Email or username</label>
-      </div>
-
-      <div className="form-outline mb-4">
-        <input type="password" id="loginPassword" className="form-control" />
-        <label className="form-label" for="loginPassword">Password</label>
-      </div>
-
-      <div className="row mb-4">
-        <div className="col-md-6 d-flex justify-content-center">
-
-          <div className="form-check mb-3 mb-md-0">
-            <input className="form-check-input" type="checkbox" value="" id="loginCheck" checked />
-            <label className="form-check-label" for="loginCheck"> Remember me </label>
+    <>
+    <br/>
+    <br/>
+    <div className="Auth-form-container" style={{ 
+          justifyContent: 'center',
+          display: "flex",
+          alignItems: 'center',
+          alignContent: 'center'}}>
+      <form className="Auth-form">
+        <div className="Auth-form-content">
+          <h1 className="Auth-form-title">Register</h1>
+          <br/>
+          <div className="text-center">
+            Already registered?{" "}
+            <span className="link-primary">
+              Sign In
+            </span>
           </div>
+          <div className="form-group mt-3">
+            <label>Full Name</label>
+            <input
+              type="email"
+              className="form-control mt-1"
+              placeholder="e.g Jane Doe"
+            />
+          </div>
+          <div className="form-group mt-3">
+            <label>Email address</label>
+            <input
+              type="email"
+              className="form-control mt-1"
+              placeholder="Email Address"
+            />
+          </div>
+          <div className="form-group mt-3">
+            <label>Password</label>
+            <input
+              type="password"
+              className="form-control mt-1"
+              placeholder="Password"
+            />
+          </div>
+          <div className="d-grid gap-2 mt-3">
+            <button type="submit" className="btn btn-black">
+              Submit
+            </button>
+          </div>
+          <p className="text-center mt-2">
+            Forgot <a href="#">password?</a>
+          </p>
         </div>
-
-        <div className="col-md-6 d-flex justify-content-center">
-
-          <a href="#!">Forgot password?</a>
-        </div>
-      </div>
-
-      <button type="submit" className="btn btn-dark btn-block mb-4">Sign in</button>
-
-      <div className="text-center">
-        <p>Not a member? <a href="#!">Register</a></p>
-      </div>
-    </form>
-  </div>
-  </div>
-
-  </div>
-
+      </form>
+    </div>
+    <br/>
+    <br/>
+    </>
   );
 }
 

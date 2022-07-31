@@ -3,15 +3,6 @@ import React from "react";
 export default function TextImage(){
   return (
     <>
-    {/* <div className="d-flex flex-row mb-3">
-     <div className="p-2">
-        <h3> OUR STRATEGY</h3>
-    </div>
-    <div className="p-2">
-         <img className="imgText" src="https://images.pexels.com/photos/3551805/pexels-photo-3551805.jpeg?auto=compress&cs=tinysrgb&w=600"></img>
-    </div>
-  <div className="p-2"></div>
-</div> */}
 <div className="d-flex justify-content-center">
   <container className="containertext">
     <h4>Why is better to invest in your home in a real state development?</h4>

@@ -14,6 +14,9 @@ import LogIn from "./pages/LogIn";
 import Signup from "./pages/Signup";
 import Properties from "./pages/Properties";
 import Profile from "./pages/Profile";
+import Property1 from "./pages/Property1";
+
+
 
 
 export default function App() {
@@ -71,6 +74,7 @@ export default function App() {
         <Route path="/auth/signup" element={<Signup/>}/>
         <Route path="/properties" element={<Properties/>}/>
         <Route path="/profile" element={<Profile/>}/>
+        <Route path="/property1" element={<Property1/>}/>
       </Routes>
       <Footer/>
     </div>
