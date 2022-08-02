@@ -1,7 +1,7 @@
 <div id="top"></div>
 
 <h1 align="center">Build your home</h1>
-  <h3align="center">own your future</h3>
+  <h3 align="center">own your future</h3>
 
 </div>
 
