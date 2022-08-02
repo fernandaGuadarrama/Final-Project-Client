@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState, useEffect }from 'react';
 import "../App.css";
 import { MDBInput, 
     MDBInputGroup, 
@@ -11,29 +11,45 @@ import { MDBInput,
     MDBBtn } from 'mdb-react-ui-kit';
 
 export default function Form() {
+  const [Firstname, setFirstname ] = useState("")
+  const [Lastname, setLastname ] = useState("")
+  const [email, setEmail ] = useState("")
+  const [phone, setPhone ] = useState("")
+  const [area, setArea ] = useState("")
+
+  const sendData = () => {
+    const Data={Firstname, Lastname, phone, email, area}
+    console.log(Data)
+  }
+
+
+
   return (
     <>
     <h3>Submit your information and receive a 10% discount on the house of your dreams</h3>
     <br/>
     <h2>YOUR FUTURE IS AROUND THE CORNER!</h2>
     <br/>
-    <div className="container-md">
-        <MDBInputGroup textBefore='First and last name'>
-      <input className='form-control' type='text' />
-      <input className='form-control' type='text' />
+    <div className="container-md" >
+        <MDBInputGroup textBefore='First  name'>
+      <input className='form-control' type='text' name="Firstname" value={Firstname} onChange={ (e) => setFirstname(e.target.value)}/>
+      </MDBInputGroup>
+      <br/>
+      <MDBInputGroup textBefore='Last name'>
+      <input className='form-control' type='text' name="Lastname" value={Lastname} onChange={ (e) => setLastname(e.target.value)} />
     </MDBInputGroup>
     <br/>
-     <MDBInput label='Email for contact' id='E-mail' type='text' />
+     <MDBInput label='Email for contact' id='E-mail' type='text' name="email" value={email} onChange={ (e) => setEmail(e.target.value)}/>
       <br />
-      <MDBInput label='Phone number' id='typePhone' type='tel' />
+      <MDBInput label='Phone number' id='typePhone' type='tel' name="phone" value={phone} onChange={ (e) => setPhone(e.target.value)}/>
       <br/>
       <MDBInputGroup className='mb-3' >
         {/* <input className='form-control'  /> */}
-        <MDBDropdown>
-          <MDBDropdownToggle>Select a property you are interested in</MDBDropdownToggle>
-          <MDBDropdownMenu>
+        <MDBDropdown onChange={ (e) => setArea(e.target.value)}>
+          <MDBDropdownToggle >Select a property you are interested in</MDBDropdownToggle>
+          <MDBDropdownMenu >
             <MDBDropdownItem>
-              <MDBDropdownLink>Nuevo Vallarta</MDBDropdownLink>
+              <MDBDropdownLink value={"Nuevo Vallarta"}>Nuevo Vallarta</MDBDropdownLink>
             </MDBDropdownItem>
             <MDBDropdownItem>
               <MDBDropdownLink>Riviera Maya</MDBDropdownLink>
@@ -53,7 +69,7 @@ export default function Form() {
           </MDBDropdownMenu>
         </MDBDropdown>
       </MDBInputGroup>
-      <MDBBtn className='mx-2' color='dark'>
+      <MDBBtn className='mx-2' color='dark' onClick={sendData}>
         Get information about the house of your dreams
       </MDBBtn>
     </div>

@@ -34,7 +34,7 @@ export default function Profile() {
               </button>
             </div>
             <div className="ms-3" style={{marginTop: "130px"}}>
-              <h5>Fernanda Guadarrama</h5>
+              <h3>Fernanda Guadarrama</h3>
               <p>Mexico City</p>
             </div>
           </div>

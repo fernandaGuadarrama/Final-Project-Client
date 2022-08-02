@@ -23,6 +23,9 @@ import Admin from "./pages/Admin";
 export default function App() {
   const [user, setUser] = useState(null);
   const [isLoading, setIsLoading] = useState(true);
+  //const de requestInfo
+  const [requestInfo, setRequestInfo] = useState(null);
+  
 
   const navigate = useNavigate()
 
@@ -79,7 +82,7 @@ export default function App() {
         <Route path="/properties" element={<Properties/>}/>
         <Route path="/profile" element={<Profile/>}/>
         <Route path="/property1" element={<Property1/>}/>
-        <Route path="/admin/id" element={<Admin/>}/>
+        <Route path="/admin" element={<Admin/>}/>
       </Routes>
       <Footer/>
     </div>
