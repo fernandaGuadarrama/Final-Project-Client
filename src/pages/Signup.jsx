@@ -1,16 +1,20 @@
 import React, { useState } from "react";
 import { signup } from "../services/auth";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import "./auth.css";
 import * as PATHS from "../utils/paths";
 import * as USER_HELPERS from "../utils/userToken";
+import { MDBCheckbox } from 'mdb-react-ui-kit';
 
 export default function Signup({ authenticate }) {
   const [form, setForm] = useState({
     username: "",
     password: "",
+    role: "user",
+    email: "",
+    fullName: ""
   });
-  const { username, password } = form;
+  const { username, password, role, email, fullName} = form;
   const [error, setError] = useState(null);
   const navigate = useNavigate();
 
@@ -24,7 +28,11 @@ export default function Signup({ authenticate }) {
     const credentials = {
       username,
       password,
+      role,
+      email,
+      fullName
     };
+    console.log(credentials)
     signup(credentials).then((res) => {
       if (!res.status) {
         // unsuccessful signup
@@ -49,31 +57,66 @@ export default function Signup({ authenticate }) {
         display: "flex",
         alignItems: 'center',
         alignContent: 'center'}}>
-      <form className="Auth-form">
+      <form className="Auth-form" onSubmit={handleFormSubmission}>
         <div className="Auth-form-content">
-          <h1 className="Auth-form-title">Welcome back</h1>
+          <h1 className="Auth-form-title">Register</h1>
           <br/>
+          <div className="text-center">
+            Already registered?{" "}
+            <Link className="link-primary" to="/auth/login">
+              Log In
+            </Link>
+          </div>
           <h4 className="Auth-form-title">Sign In</h4>
-          <br/>
+          
              <div className="form-group mt-3">
             <label>Full Name</label>
             <input
-              type="email"
+              type="String"
               className="form-control mt-1"
               placeholder="e.g Jane Doe"
+              name="fullName"
+              value={fullName}
+              onChange={handleInputChange}
             />
           </div>
-          
+          <div className="form-group mt-3">
+            <label>E-mail</label>
+            <input
+              type="email"
+              className="form-control mt-1"
+              placeholder="e.g janedoe@xxx.com"
+              name="email"
+              value={email}
+              onChange={handleInputChange}
+            />
+          </div>
+          <br/>
+             <div className="form-group mt-3">
+            <label>User</label>
+            <input
+              type="String"
+              className="form-control mt-1"
+              placeholder="e.g Jane_Doe"
+              name="username"
+              value={username}
+              onChange={handleInputChange}
+            />
+          </div>
           <div className="form-group mt-3">
             <label>Password</label>
             <input
               type="password"
               className="form-control mt-1"
               placeholder="Password"
+              name="password"
+              value={password}
+              onChange={handleInputChange}
             />
-          </div>
+            <br/>
+           </div>
           <div className="d-grid gap-2 mt-3">
-            <button type="submit" className="btn btn-black">
+            <button type="submit" className="btn btn-black" >
               Submit
             </button>
           </div>
@@ -88,42 +131,4 @@ export default function Signup({ authenticate }) {
     </>
   )
 }
-    // <div>
-    //   <h1 classNameNameName="signup">Sign Up</h1>
-    //   <form onSubmit={handleFormSubmission} classNameNameName="auth__form">
-    //     <label htmlhtmlhtmlFor="input-username">Username</label>
-    //     <input
-    //       id="input-username"
-    //       type="text"
-    //       name="username"
-    //       placeholder="Text"
-    //       value={username}
-    //       onChange={handleInputChange}
-    //       required
-    //     />
-
-    //     <label htmlhtmlhtmlFor="input-password">Password</label>
-    //     <input
-    //       id="input-password"
-    //       type="password"
-    //       name="password"
-    //       placeholder="Password"
-    //       value={password}
-    //       onChange={handleInputChange}
-    //       required
-    //       minLength="8"
-    //     />
-
-    //     {error && (
-    //       <div classNameNameName="error-block">
-    //         <p>There was an error submiting the form:</p>
-    //         <p>{error.message}</p>
-    //       </div>
-    //     )}
-
-    //     <button classNameNameName="button__submit" type="submit">
-    //       Submit
-    //     </button>
-    //   </form>
-    // </div>
 

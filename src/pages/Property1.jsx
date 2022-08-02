@@ -1,4 +1,5 @@
 import React from 'react';
+import {Link} from 'react-router-dom';
 import {
   MDBCard,
   MDBCardTitle,
@@ -10,7 +11,8 @@ import TimelinePage from './Timeline';
 
 
 
-export default function Property1() {
+export default function Property1(props) {
+  const {user} = props;
   return (
     <>
     <MDBCard background='dark' className='text-white' style={{margin:"3%"}}>
@@ -24,6 +26,12 @@ export default function Property1() {
         This complex will have its own sanitization water treatment for common areas. Every unit will be delivery in the high-end of quality standards, own parking space. 1, 2 and 3 bmds units and townhouses to choose. </p>
         </MDBCardText>
         <MDBCardText><h3>Last 3 units</h3></MDBCardText>
+        {user && (
+          <>
+                  <button>Edit</button>
+                  <button>Delete</button>
+            </>
+          )}
       </MDBCardOverlay>
     </MDBCard>
     <TimelinePage/>

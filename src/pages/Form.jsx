@@ -13,11 +13,11 @@ import { MDBInput,
 export default function Form() {
   return (
     <>
-    <h3>Submit your information and recibe a 10% discount on the house of your dreams</h3>
+    <h3>Submit your information and receive a 10% discount on the house of your dreams</h3>
     <br/>
     <h2>YOUR FUTURE IS AROUND THE CORNER!</h2>
     <br/>
-    <div class="container-md">
+    <div className="container-md">
         <MDBInputGroup textBefore='First and last name'>
       <input className='form-control' type='text' />
       <input className='form-control' type='text' />

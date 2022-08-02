@@ -34,6 +34,11 @@ export default function LogIn({ authenticate }) {
       }
       USER_HELPERS.setUserToken(res.data.accessToken);
       authenticate(res.data.user);
+      if(res.data.user.role == "admin"){
+        navigate("/admin");
+      }else{
+        navigate("/");
+      }
       navigate(PATHS.HOMEPAGE);
     });
   }
@@ -47,38 +52,35 @@ export default function LogIn({ authenticate }) {
           display: "flex",
           alignItems: 'center',
           alignContent: 'center'}}>
-      <form className="Auth-form">
+      <form className="Auth-form" onSubmit={handleFormSubmission}>
         <div className="Auth-form-content">
-          <h1 className="Auth-form-title">Register</h1>
+          <h1 className="Auth-form-title">Welcome back</h1>
           <br/>
           <div className="text-center">
-            Already registered?{" "}
-            <span className="link-primary">
-              Sign In
-            </span>
+            Sign In
           </div>
           <div className="form-group mt-3">
-            <label>Full Name</label>
+            <label>Username</label>
             <input
-              type="email"
+              type="string"
               className="form-control mt-1"
               placeholder="e.g Jane Doe"
+              name="username"
+              value={username}
+              onChange={handleInputChange}
+              required
             />
           </div>
-          <div className="form-group mt-3">
-            <label>Email address</label>
-            <input
-              type="email"
-              className="form-control mt-1"
-              placeholder="Email Address"
-            />
-          </div>
-          <div className="form-group mt-3">
+            <div className="form-group mt-3">
             <label>Password</label>
             <input
               type="password"
               className="form-control mt-1"
               placeholder="Password"
+              name="password"
+              value={password}
+              onChange={handleInputChange}
+              required
             />
           </div>
           <div className="d-grid gap-2 mt-3">

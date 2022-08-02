@@ -59,7 +59,7 @@ export default function Footer() {
           <a
             className='btn btn-primary btn-floating m-1'
             style={{ backgroundColor: '#333333' }}
-            href='#!'
+            href='https://github.com/moisesvargasrangel'
             role='button'
           >
             <MDBIcon fab icon='github' />

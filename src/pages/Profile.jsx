@@ -43,11 +43,11 @@ export default function Profile() {
 
               <div className="px-3">
                 <p className="mb-1 h5"><MDBIcon fas icon="city" /></p>
-                <p className="small text-muted mb-0">2 Appartments</p>
+                <p className="small text-muted mb-0">1 Appartment</p>
               </div>
               <div>
                 <p className="mb-1 h5"><MDBIcon fas icon="home" /></p>
-                <p className="small text-muted mb-0">2 houses</p>
+                <p className="small text-muted mb-0">1 house</p>
               </div>
             </div>
           </div>
@@ -55,7 +55,6 @@ export default function Profile() {
             <div className="mb-5">
               <h1 className="lead fw-normal mb-1">Investments under construction...</h1>
               <div className="p-4" style={{backgroundColor: "#f8f9fa"}}>
-                <p className="font-italic mb-1">Mexico City Appartment</p>
                 <p className="font-italic mb-1">Nuevo Vallarta Beach House</p>
                 <p className="font-italic mb-0">Valle de Bravo Cabanna</p>
               </div>
@@ -64,7 +63,7 @@ export default function Profile() {
             <h5>Progress of your properties...</h5>
             <br/>
             <MDBCard alignment='center'>
-      <MDBCardHeader>Nuevo Vallarta</MDBCardHeader>
+      <MDBCardHeader><h2>Nuevo Vallarta</h2></MDBCardHeader>
       <MDBCardBody>
         <MDBCardTitle><h7>House near the beach</h7></MDBCardTitle>
         <MDBCardImage position='top' alt='...' src='https://cdn.resize.sparkplatform.com/pvr/2048x1600/true/20210217000321548708000000-o.jpg' />
@@ -81,7 +80,7 @@ export default function Profile() {
     <br/>
     <br/>
             <MDBCard alignment='center'>
-      <MDBCardHeader>Valle de Bravo</MDBCardHeader>
+      <MDBCardHeader><h2>Valle de Bravo</h2></MDBCardHeader>
       <MDBCardBody>
         <MDBCardTitle><h7>Little Cabanna</h7></MDBCardTitle>
         <MDBCardImage position='top' alt='...' src='https://images.pexels.com/photos/6342356/pexels-photo-6342356.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1' />

@@ -1,6 +1,6 @@
 import React from "react";
 import { useEffect, useState } from "react";
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, useNavigate } from "react-router-dom";
 import LoadingComponent from "./components/Loading";
 import Navbar from "./components/Navbar/Navbar";
 import { getLoggedIn, logout } from "./services/auth";
@@ -15,6 +15,7 @@ import Signup from "./pages/Signup";
 import Properties from "./pages/Properties";
 import Profile from "./pages/Profile";
 import Property1 from "./pages/Property1";
+import Admin from "./pages/Admin";
 
 
 
@@ -22,6 +23,8 @@ import Property1 from "./pages/Property1";
 export default function App() {
   const [user, setUser] = useState(null);
   const [isLoading, setIsLoading] = useState(true);
+
+  const navigate = useNavigate()
 
   useEffect(() => {
     const accessToken = USER_HELPERS.getUserToken();
@@ -51,6 +54,7 @@ export default function App() {
       }
       USER_HELPERS.removeUserToken();
       setIsLoading(false);
+      navigate("/auth/login");
       return setUser(null);
     });
   }
@@ -70,11 +74,12 @@ export default function App() {
           <Route key={route.path} path={route.path} element={route.element} />
         ))} */}
         <Route path="/" element= {<HomePage />}/>
-        <Route path= "/auth/login" element={<LogIn/>} />
-        <Route path="/auth/signup" element={<Signup/>}/>
+        <Route path= "/auth/login" element={<LogIn authenticate={authenticate}/>} />
+        <Route path="/auth/signup" element={<Signup authenticate={authenticate}/>}/>
         <Route path="/properties" element={<Properties/>}/>
         <Route path="/profile" element={<Profile/>}/>
         <Route path="/property1" element={<Property1/>}/>
+        <Route path="/admin/id" element={<Admin/>}/>
       </Routes>
       <Footer/>
     </div>
