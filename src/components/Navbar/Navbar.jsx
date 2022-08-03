@@ -77,7 +77,7 @@ import {
               { user && ( 
                 <>
                     <MDBNavbarItem>
-                        <button onClick={handleLogout}>Log out</button>
+                         <button onClick={handleLogout}>Log out </button>
                     </MDBNavbarItem>
                     <MDBNavbarItem>
                             <img
