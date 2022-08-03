@@ -21,7 +21,7 @@ export default function Cards() {
               <p className="card-text">Invest in your future, buy now and save 50% of the finall price...</p>
             </div>
             <div className="card-footer">
-              <small className="text-muted">Last 10 units</small>
+              <small className="text-muted">Last 8 units</small>
             </div>
           </div>
           <div className="card">
