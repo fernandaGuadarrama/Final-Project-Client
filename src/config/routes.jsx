@@ -8,6 +8,7 @@ import Signup from "../pages/Signup";
 import ProtectedPage from "../pages/ProtectedPage";
 import * as PATHS from "../utils/paths";
 import Property1 from "../pages/Property1";
+import Addproperty from "../pages/Addproperty";
 
 const routes = (props) => {
   const { user } = props;
@@ -32,7 +33,14 @@ const routes = (props) => {
       path: PATHS.SIGNUPPAGE,
       element: <Signup {...props} />,
     },
-
+    {
+      path: PATHS.ADDPROPERTY,
+      element: <Addproperty {...props} />,
+    },
+    {
+      path: PATHS.ADMIN,
+      element: <admin {...props} />,
+    },
     {
       path: PATHS.LOGINPAGE,
       element: <Login {...props} />,

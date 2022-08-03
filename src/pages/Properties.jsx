@@ -51,12 +51,12 @@ export default function Properties() {
             </a>
           </div>
           <div className="card-body">
-            <h5 className="card-title">Post title</h5>
+            <h5 className="card-title">Riviera Maya</h5>
             <p className="card-text">
-              Some quick example text to build on the card title and make up the bulk of the
-              card's content.
+            Exclusive apartments with private Owners Club and a privileged view of the Caribbean Sea. 
+            Located in the quiet golf community of Corasol these beautiful apartments offer many luxurious amenities with close access to Playa del Carmen
             </p>
-            <a href="#!" className="btn btn-dark">Read</a>
+            <a href="#!" className="btn btn-dark">See the development</a>
           </div>
         </div>
       </div>
@@ -70,12 +70,11 @@ export default function Properties() {
             </a>
           </div>
           <div className="card-body">
-            <h5 className="card-title">Post title</h5>
+            <h5 className="card-title">Mexico City</h5>
             <p className="card-text">
-              Some quick example text to build on the card title and make up the bulk of the
-              card's content.
+            A unique space that adheres to the integral design and the philosophy of conservation of the development surrounded by an extraordinary natural environment to which more than 40 amenities are added that allow healthy integration social and sports activities of its residents, thus creating the ideal place for the healthy development and growth of families.
             </p>
-            <a href="#!" className="btn btn-dark">Read</a>
+            <a href="#!" className="btn btn-dark">See the development</a>
           </div>
         </div>
       </div>
@@ -91,12 +90,12 @@ export default function Properties() {
             </a>
           </div>
           <div className="card-body">
-            <h5 className="card-title">Post title</h5>
+            <h5 className="card-title">Valle de Bravo</h5>
             <p className="card-text">
-              Some quick example text to build on the card title and make up the bulk of the
-              card's content.
+            This unique concept has sunny gardens, a pool, a dock, a gym, a SPA, a lounge, paddle tennis courts and a children's play area. The complex also 
+            has activities such as kayaking and paddle boarding.
             </p>
-            <a href="#!" className="btn btn-dark">Read</a>
+            <a href="#!" className="btn btn-dark">See the development</a>
           </div>
         </div>
       </div>
@@ -110,12 +109,11 @@ export default function Properties() {
             </a>
           </div>
           <div className="card-body">
-            <h5 className="card-title">Post title</h5>
+            <h5 className="card-title">Morelos</h5>
             <p className="card-text">
-              Some quick example text to build on the card title and make up the bulk of the
-              card's content.
+            You will find exclusive amenities, gardens, swimming pools and much more. Loft prototype and 6 residential prototypes, ranging from 148 m2 to 214 m2.
             </p>
-            <a href="#!" className="btn btn-dark">Read</a>
+            <a href="#!" className="btn btn-dark">See the development</a>
           </div>
         </div>
       </div>

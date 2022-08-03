@@ -4,14 +4,14 @@
   import "../App.css";
 
   export default function admin(props) {
-    const [listInfo, setLA] = useState([]);
+    const [listRequestInfo, setLA] = useState([]);
     const { user } = props;
     useEffect(() => {
 
 
       //Conect with the server (get)
       fetch(`${process.env.REACT_APP_SERVER_URL}/request`)
-        .then((data) => data.json())
+        .then((Data) => Data.json())
         .then((requestInfo) => {
           setLA(requestInfo);
         })
@@ -20,15 +20,17 @@
     return (
       <div>
         <h1>Admin</h1>
-        {listInfo.map((requestInfo) => {
+        {listRequestInfo.map((Data) => {
           return (
-            <p key={requestInfo._id}>
-              {requestInfo.Firstname} {requestInfo.Lastname}
-              
-                      <>
-                        <button>Edit</button>
-                        <button>Delete</button>
+            <p key={Data._id}>
+              {Data.Firstname} {Data.Lastname}
+                  { user && (
+                    <>
+                    {user.role == "admin" && (    
+                         <button>Delete</button>
+                       )}
                       </>
+                      )}
             </p>
           );
         })}
