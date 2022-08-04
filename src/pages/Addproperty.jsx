@@ -13,43 +13,40 @@ import { MDBInput,
 export default function Addproperty() {
   const [property, setProperty ] = useState("")
   const [progress, setProgress] = useState("")
-  const [photo, setPhoto ] = useState("")
+  const [photos, setphotos ] = useState("")
   const [title, setTitle ] = useState("")
   const [location, setLocation ] = useState("")
   const [description, setDescription ] = useState("")
 
 
   const sendData = () => {
-    const Data={property, progress, photo, title, location, description}
-    console.log(Data)
-    fetch(`${process.env.REACT_APP_SERVER_URL}/request/`, {
+
+    fetch(`${process.env.REACT_APP_SERVER_URL}/Addproperty`, {
       method: "POST",
-        
-      body: JSON.stringify(Data),
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({property, progress, photos, title, location, description}),
     })
-    .then((datos)=> console.log(datos.json()))
-
-    .then((data) => {
-      console.log(data)
-      setProperty(data);
-      setPhoto(data);
-      setTitle(data);
-      setLocation(data);
-      setDescription(data);
-    })
-    .catch(console.log)
+    .then((datos)=> datos.json())
+    .then(console.log)
+    .catch(console.log);
   }
-
-
-
   return (
     <>
     <br/>
     <h2>Add a property:</h2>
     <br/>
     <div className="container-md" >
-        <MDBInputGroup textBefore='Property'>
-      <input className='form-control' type='text' name="property" value={property} onChange={ (e) => setProperty(e.target.value)}/>
+    <MDBInputGroup className='mb-3' textBefore='Select an area' width="100wv">
+    <select onChange={ (e) => setProperty(e.target.value)} value={property}>
+        <option>Select an area</option>
+        <option value={"Nuevo Vallarta"}>Nuevo Vallarta</option>
+        <option value={"Riviera Maya"}>Riviera Maya</option>
+        <option value={"Mexico City"}>Mexico City</option>
+        <option value={"Morelos"}>Morelos</option>
+        <option value={"Valle de Bravo"}>Valle de Bravo</option>
+      </select>
       </MDBInputGroup>
       <br/>
       <MDBInput label='Title' id='typePhone' type='text' name="title" value={title} onChange={ (e) => setTitle(e.target.value)}/>
@@ -58,7 +55,7 @@ export default function Addproperty() {
       <input className='form-control' type='text' name="progress" value={progress} onChange={ (e) => setProgress(e.target.value)} />
     </MDBInputGroup>
     <br/>
-     <MDBInput label='Url photo' id='E-mail' type='text' name="photo" value={photo} onChange={ (e) => setPhoto(e.target.value)}/>
+     <MDBInput label='Url photos' id='E-mail' type='text' name="photos" value={photos} onChange={ (e) => setphotos(e.target.value)}/>
       <br />
       <MDBInput label='Location' id='typePhone' type='text' name="location" value={location} onChange={ (e) => setLocation(e.target.value)}/>
       <br/>
@@ -67,5 +64,5 @@ export default function Addproperty() {
       </MDBBtn>
     </div>
     </>
-  );
+  )
 }

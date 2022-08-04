@@ -1,5 +1,7 @@
 import React from 'react';
-
+import { useState, useEffect } from "react";
+  import { Link } from "react-router-dom";
+  import "../App.css";
 import {
   MDBFooter,
   MDBContainer,
@@ -7,10 +9,29 @@ import {
   MDBRow,
   MDBIcon,
 } from 'mdb-react-ui-kit';
-import {  Link } from 'react-router-dom';
 
 export default function Properties(props) {
-  const {user} = props; 
+  const [listProperties, setLP] = useState([]);
+  const { user } = props;
+  useEffect(() => {
+      //Conect with the server (post)
+      fetch(`${process.env.REACT_APP_SERVER_URL}/Addproperty`)
+        .then((Data) => Data.json())
+        .then((properties) => {
+          setLP(properties);
+        })
+        .catch(console.log);
+    }, [ ]);
+    return (
+      <div>
+      <br/>
+      <br/>
+        <h1>Information requests</h1>
+        <br/>
+        <br/>
+        {listProperties.map((Data) => {
+
+
   return (
     <>
     <MDBCol>
@@ -149,5 +170,10 @@ export default function Properties(props) {
    </div>
   </MDBCol>
     </>
-  );
-}
+    );
+        })}
+
+     
+      </div>
+      )
+    }

@@ -24,7 +24,8 @@ import Addproperty from "./pages/Addproperty"
 export default function App() {
   const [user, setUser] = useState(null);
   const [isLoading, setIsLoading] = useState(true);
-  //const de requestInfo
+
+  const [addproperty, setLP] = useState(null);
   const [requestInfo, setRequestInfo] = useState(null);
   
 
@@ -80,7 +81,7 @@ export default function App() {
         <Route path="/" element= {<HomePage requestInfo={requestInfo}  user={user} />}/>
         <Route path= "/auth/login" element={<LogIn authenticate={authenticate}/>} />
         <Route path="/auth/signup" element={<Signup authenticate={authenticate}/>}/>
-        <Route path="/properties" element={<Properties user={user}/>}/>
+        <Route path="/properties" element={<Properties user={user} addproperty={addproperty}/>}/>
         <Route path="/profile" element={<Profile user={user}/>} />
         <Route path="/property1" element={<Property1/>}/>
         <Route path="/admin" element={<Admin/>}/>

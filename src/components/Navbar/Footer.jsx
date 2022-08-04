@@ -9,8 +9,14 @@ import {
 
 export default function Footer() {
   return (
-    <MDBFooter className='bg-light text-center text-white' style={{position:"relative", bottom:"0", width:"100vw"}}>
+    <MDBFooter className='bg-light text-center text-white' style={{position:"relative", bottom:"0", width:"100vw", marginTop:"10%"}}>
       <div className='container p-4 pb-0'>
+      <div className='text-center p-3' style={{color:"GrayText"}}>
+        © 2022 Coded by: 
+        <a style={{color:"GrayText"}}>
+          . Fernanda Guadarrama Guzmán
+        </a>
+      </div>
         <section className='mb-4'>
           <a
             className='btn btn-primary btn-floating m-1'
