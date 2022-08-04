@@ -7,7 +7,7 @@ import {
   MDBRow,
   MDBIcon,
 } from 'mdb-react-ui-kit';
-import { Link } from 'react-router-dom';
+import {  Link } from 'react-router-dom';
 
 export default function Properties() {
   return (
