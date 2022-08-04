@@ -1,0 +1,15 @@
+import {
+  MDBCard,
+  MDBCardHeader,
+  MDBCardBody,
+  MDBCardTitle,
+  MDBCardText,
+  MDBCardFooter,
+  MDBBtn
+} from 'mdb-react-ui-kit';
+
+export default function App() {
+  return (
+    
+  );
+}

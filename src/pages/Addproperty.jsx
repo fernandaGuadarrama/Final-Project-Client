@@ -28,21 +28,22 @@ export default function Addproperty() {
 
   return (
     <>
+    <br/>
     <h2>Add a property:</h2>
     <br/>
     <div className="container-md" >
-        <MDBInputGroup textBefore='First  name'>
+        <MDBInputGroup textBefore='Property'>
       <input className='form-control' type='text' name="property" value={property} onChange={ (e) => setProperty(e.target.value)}/>
       </MDBInputGroup>
       <br/>
-      <MDBInputGroup textBefore='Last name'>
+      <MDBInput label='Title' id='typePhone' type='text' name="title" value={title} onChange={ (e) => setTitle(e.target.value)}/>
+      <br/>
+      <MDBInputGroup textBefore='Level of progress'>
       <input className='form-control' type='text' name="progress" value={progress} onChange={ (e) => setProgress(e.target.value)} />
     </MDBInputGroup>
     <br/>
      <MDBInput label='Url photo' id='E-mail' type='text' name="photo" value={photo} onChange={ (e) => setPhoto(e.target.value)}/>
       <br />
-      <MDBInput label='Title' id='typePhone' type='text' name="title" value={title} onChange={ (e) => setTitle(e.target.value)}/>
-      <br/>
       <MDBInput label='Location' id='typePhone' type='text' name="location" value={location} onChange={ (e) => setLocation(e.target.value)}/>
       <br/>
       <MDBBtn className='mx-2' color='dark' onClick={sendData}>

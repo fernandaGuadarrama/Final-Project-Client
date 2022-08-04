@@ -74,9 +74,6 @@ export default function App() {
     <div className="App">
       <Navbar handleLogout={handleLogout} user={user} />
       <Routes>
-        {/* {routes({ user, authenticate, handleLogout }).map((route) => (
-          <Route key={route.path} path={route.path} element={route.element} />
-        ))} */}
         <Route path="/" element= {<HomePage requestInfo={requestInfo}/>}/>
         <Route path= "/auth/login" element={<LogIn authenticate={authenticate}/>} />
         <Route path="/auth/signup" element={<Signup authenticate={authenticate}/>}/>
@@ -84,7 +81,7 @@ export default function App() {
         <Route path="/profile" element={<Profile/>}/>
         <Route path="/property1" element={<Property1/>}/>
         <Route path="/admin" element={<Admin/>}/>
-        <Route path="/admin" element={<Addproperty/>}/>
+        <Route path="/Addproperty" element={<Addproperty/>}/>
       </Routes>
       <Footer/>
     </div>

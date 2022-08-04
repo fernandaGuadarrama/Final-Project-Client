@@ -20,6 +20,19 @@ export default function Form() {
   const sendData = () => {
     const Data={Firstname, Lastname, phone, email, area}
     console.log(Data)
+    fetch("http://localhost:5005/api/request", {
+      method: "POST",
+      body: JSON.stringify(Data),
+    })
+    .then(() => {
+      console.log("registrado")
+      setFirstname("")
+      setLastname("")
+      setEmail("")
+      setPhone("")
+      setArea("")
+    })
+    .catch(console.log)
   }
 
 
@@ -43,8 +56,17 @@ export default function Form() {
       <br />
       <MDBInput label='Phone number' id='typePhone' type='tel' name="phone" value={phone} onChange={ (e) => setPhone(e.target.value)}/>
       <br/>
-      <MDBInputGroup className='mb-3' >
-        {/* <input className='form-control'  /> */}
+      <select onChange={ (e) => setArea(e.target.value)} value={area} >
+        <option>Select an area</option>
+        <option value={"Nuevo Vallarta"}>Nuevo Vallarta</option>
+        <option value={"Riviera Maya"}>Riviera Maya</option>
+        <option value={"Mexico City"}>Mexico City</option>
+        <option value={"Morelos"}>Morelos</option>
+        <option value={"Valle de Bravo"}>Valle de Bravo</option>
+      </select>
+
+      {/* <MDBInputGroup className='mb-3' >
+        {/* <input className='form-control'  />
         <MDBDropdown onChange={ (e) => setArea(e.target.value)}>
           <MDBDropdownToggle >Select a property you are interested in</MDBDropdownToggle>
           <MDBDropdownMenu >
@@ -68,7 +90,7 @@ export default function Form() {
             <MDBDropdownDivider />
           </MDBDropdownMenu>
         </MDBDropdown>
-      </MDBInputGroup>
+      </MDBInputGroup> */}
       <MDBBtn className='mx-2' color='dark' onClick={sendData}>
         Get information about the house of your dreams
       </MDBBtn>
