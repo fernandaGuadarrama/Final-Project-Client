@@ -9,7 +9,7 @@ import { MDBInput,
     MDBDropdownToggle,
     MDBDropdownDivider,
     MDBBtn } from 'mdb-react-ui-kit';
-
+import axios from "axios"
 export default function Form() {
   const [Firstname, setFirstname ] = useState("")
   const [Lastname, setLastname ] = useState("")
@@ -22,25 +22,29 @@ export default function Form() {
     const Data={Firstname: Firstname, Lastname: Lastname, phone: phone, email: email, area: area}
 
     console.log(Data)
-    fetch(`${process.env.REACT_APP_SERVER_URL}/request/`, {
+    fetch(`${process.env.REACT_APP_SERVER_URL}/request`, {
       method: "POST",
-        
+      headers: {
+        "Content-Type": "application/json",
+      },
       body: JSON.stringify(Data),
     })
-    .then((datos)=> console.log(datos.json()))
-
+    .then((datos)=> datos.json())
     .then((data) => {
       console.log(data)
-      setFirstname(data);
-      setLastname(data);
-      setEmail(data);
-      setPhone(data);
-      setArea(data);
+      setFirstname("");
+      setLastname("");
+      setEmail("");
+      setPhone("");
+      setArea("");
     })
     .catch(console.log)
   }
 
-
+  // fetch(`${process.env.REACT_APP_SERVER_URL}/request/`)
+  // .then(res => res.json())
+  // .then(info => console.log("infoo", info))
+  // .catch(console.log)
 
   return (
     <>
