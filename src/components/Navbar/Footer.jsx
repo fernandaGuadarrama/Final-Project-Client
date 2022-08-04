@@ -15,7 +15,7 @@ export default function Footer() {
           <a
             className='btn btn-primary btn-floating m-1'
             style={{ backgroundColor: '#3b5998' }}
-            href='#!'
+            href='https://www.facebook.com/fernandaguadarrama10'
             role='button'
           >
             <MDBIcon fab icon='facebook-f' />
@@ -24,7 +24,7 @@ export default function Footer() {
           <a
             className='btn btn-primary btn-floating m-1'
             style={{ backgroundColor: '#55acee' }}
-            href='#!'
+            href='https://twitter.com/Pau_Rawr'
             role='button'
           >
             <MDBIcon fab icon='twitter' />
@@ -32,16 +32,8 @@ export default function Footer() {
 
           <a
             className='btn btn-primary btn-floating m-1'
-            style={{ backgroundColor: '#dd4b39' }}
-            href='#!'
-            role='button'
-          >
-            <MDBIcon fab icon='google' />
-          </a>
-          <a
-            className='btn btn-primary btn-floating m-1'
             style={{ backgroundColor: '#ac2bac' }}
-            href='#!'
+            href='https://www.instagram.com/fernandaguadarrama/'
             role='button'
           >
             <MDBIcon fab icon='instagram' />
@@ -50,7 +42,7 @@ export default function Footer() {
           <a
             className='btn btn-primary btn-floating m-1'
             style={{ backgroundColor: '#0082ca' }}
-            href='#!'
+            href='https://www.linkedin.com/in/fernanda-guadarrama/'
             role='button'
           >
             <MDBIcon fab icon='linkedin-in' />
@@ -59,7 +51,7 @@ export default function Footer() {
           <a
             className='btn btn-primary btn-floating m-1'
             style={{ backgroundColor: '#333333' }}
-            href='https://github.com/moisesvargasrangel'
+            href='https://github.com/fernandaGuadarrama'
             role='button'
           >
             <MDBIcon fab icon='github' />

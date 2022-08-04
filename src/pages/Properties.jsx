@@ -9,7 +9,8 @@ import {
 } from 'mdb-react-ui-kit';
 import {  Link } from 'react-router-dom';
 
-export default function Properties() {
+export default function Properties(props) {
+  const {user} = props; 
   return (
     <>
     <MDBCol>
@@ -37,7 +38,8 @@ export default function Properties() {
             <p className="card-text">
               Is an ambisius Green brand new project to be development in approx 4.5 hectares; 9 towers, commercial spaces, lagoon, several pools, yoga areas, paddle and bocce courts, green areas, mango trees, jogging tracks, game spaces, snack bar and much more! This complex will have its own sanitization water treatment for …
             </p>
-            <Link to="/property1" className="btn btn-dark">See the development</Link>
+            { user && (
+            <Link to="/property1" className="btn btn-dark">See the development</Link>)}
           </div>
         </div>
       </div>
@@ -56,7 +58,8 @@ export default function Properties() {
             Exclusive apartments with private Owners Club and a privileged view of the Caribbean Sea. 
             Located in the quiet golf community of Corasol these beautiful apartments offer many luxurious amenities with close access to Playa del Carmen
             </p>
-            <a href="#!" className="btn btn-dark">See the development</a>
+            {user && (
+            <a href="#!" className="btn btn-dark">See the development</a>)}
           </div>
         </div>
       </div>
@@ -74,7 +77,8 @@ export default function Properties() {
             <p className="card-text">
             A unique space that adheres to the integral design and the philosophy of conservation of the development surrounded by an extraordinary natural environment to which more than 40 amenities are added that allow healthy integration social and sports activities of its residents, thus creating the ideal place for the healthy development and growth of families.
             </p>
-            <a href="#!" className="btn btn-dark">See the development</a>
+            { user && (
+            <a href="#!" className="btn btn-dark">See the development</a>)}
           </div>
         </div>
       </div>
@@ -95,7 +99,8 @@ export default function Properties() {
             This unique concept has sunny gardens, a pool, a dock, a gym, a SPA, a lounge, paddle tennis courts and a children's play area. The complex also 
             has activities such as kayaking and paddle boarding.
             </p>
-            <a href="#!" className="btn btn-dark">See the development</a>
+            { user && (
+            <a href="#!" className="btn btn-dark">See the development</a>)}
           </div>
         </div>
       </div>
@@ -113,7 +118,8 @@ export default function Properties() {
             <p className="card-text">
             You will find exclusive amenities, gardens, swimming pools and much more. Loft prototype and 6 residential prototypes, ranging from 148 m2 to 214 m2.
             </p>
-            <a href="#!" className="btn btn-dark">See the development</a>
+            { user && (
+            <a href="#!" className="btn btn-dark">See the development</a>)}
           </div>
         </div>
       </div>

@@ -20,7 +20,7 @@
     useEffect(() => {
 
 
-      //Conect with the server (get)
+      //Conect with the server (post)
       fetch(`${process.env.REACT_APP_SERVER_URL}/request`)
         .then((Data) => Data.json())
         .then((requestInfo) => {

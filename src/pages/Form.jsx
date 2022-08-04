@@ -18,19 +18,24 @@ export default function Form() {
   const [area, setArea ] = useState("")
 
   const sendData = () => {
-    const Data={Firstname, Lastname, phone, email, area}
+    
+    const Data={Firstname: Firstname, Lastname: Lastname, phone: phone, email: email, area: area}
+
     console.log(Data)
-    fetch("http://localhost:5005/api/request", {
+    fetch(`${process.env.REACT_APP_SERVER_URL}/request/`, {
       method: "POST",
+        
       body: JSON.stringify(Data),
     })
-    .then(() => {
-      console.log("registrado")
-      setFirstname("")
-      setLastname("")
-      setEmail("")
-      setPhone("")
-      setArea("")
+    .then((datos)=> console.log(datos.json()))
+
+    .then((data) => {
+      console.log(data)
+      setFirstname(data);
+      setLastname(data);
+      setEmail(data);
+      setPhone(data);
+      setArea(data);
     })
     .catch(console.log)
   }
@@ -65,33 +70,7 @@ export default function Form() {
         <option value={"Valle de Bravo"}>Valle de Bravo</option>
       </select>
 
-      {/* <MDBInputGroup className='mb-3' >
-        {/* <input className='form-control'  />
-        <MDBDropdown onChange={ (e) => setArea(e.target.value)}>
-          <MDBDropdownToggle >Select a property you are interested in</MDBDropdownToggle>
-          <MDBDropdownMenu >
-            <MDBDropdownItem>
-              <MDBDropdownLink value={"Nuevo Vallarta"}>Nuevo Vallarta</MDBDropdownLink>
-            </MDBDropdownItem>
-            <MDBDropdownItem>
-              <MDBDropdownLink>Riviera Maya</MDBDropdownLink>
-            </MDBDropdownItem>
-            <MDBDropdownDivider />
-            <MDBDropdownItem>
-              <MDBDropdownLink>Mexico City</MDBDropdownLink>
-            </MDBDropdownItem>
-            
-            <MDBDropdownItem>
-              <MDBDropdownLink>Morelos</MDBDropdownLink>
-            </MDBDropdownItem>
-            <MDBDropdownItem>
-              <MDBDropdownLink>Valle de Bravo</MDBDropdownLink>
-            </MDBDropdownItem>
-            <MDBDropdownDivider />
-          </MDBDropdownMenu>
-        </MDBDropdown>
-      </MDBInputGroup> */}
-      <MDBBtn className='mx-2' color='dark' onClick={sendData}>
+     <MDBBtn className='mx-2' color='dark' onClick={sendData}>
         Get information about the house of your dreams
       </MDBBtn>
     </div>

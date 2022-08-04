@@ -7,7 +7,9 @@ import Form from "./Form";
 import TextAbout from "./textAbout";
 
 
-function HomePage() {
+function HomePage(props) {
+  const {user} = props; 
+  console.log("HP", props)
   return (
     <div>
         <HomeViews/>
@@ -23,7 +25,8 @@ function HomePage() {
         <h1>Your future is around the corner, let us make it real...</h1>
         <br/>
         <br/>
-        <Form/>
+        { !user && (
+        <Form/>)}
         <br/>
         <br/>
     </div>

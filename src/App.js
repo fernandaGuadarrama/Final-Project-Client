@@ -59,9 +59,12 @@ export default function App() {
       USER_HELPERS.removeUserToken();
       setIsLoading(false);
       navigate("/auth/login");
+      setUser(null);
+      console.log("logout")
       return setUser(null);
     });
   }
+
 
   function authenticate(user) {
     setUser(user);
@@ -72,13 +75,13 @@ export default function App() {
   }
   return (
     <div className="App">
-      <Navbar handleLogout={handleLogout} user={user} />
+      <Navbar handleLogout={handleLogout} user={user} /> 
       <Routes>
-        <Route path="/" element= {<HomePage requestInfo={requestInfo}/>}/>
+        <Route path="/" element= {<HomePage requestInfo={requestInfo}  user={user} />}/>
         <Route path= "/auth/login" element={<LogIn authenticate={authenticate}/>} />
         <Route path="/auth/signup" element={<Signup authenticate={authenticate}/>}/>
-        <Route path="/properties" element={<Properties/>}/>
-        <Route path="/profile" element={<Profile/>}/>
+        <Route path="/properties" element={<Properties user={user}/>}/>
+        <Route path="/profile" element={<Profile user={user}/>} />
         <Route path="/property1" element={<Property1/>}/>
         <Route path="/admin" element={<Admin/>}/>
         <Route path="/Addproperty" element={<Addproperty/>}/>

@@ -22,6 +22,22 @@ export default function Addproperty() {
   const sendData = () => {
     const Data={property, progress, photo, title, location, description}
     console.log(Data)
+    fetch(`${process.env.REACT_APP_SERVER_URL}/request/`, {
+      method: "POST",
+        
+      body: JSON.stringify(Data),
+    })
+    .then((datos)=> console.log(datos.json()))
+
+    .then((data) => {
+      console.log(data)
+      setProperty(data);
+      setPhoto(data);
+      setTitle(data);
+      setLocation(data);
+      setDescription(data);
+    })
+    .catch(console.log)
   }
 
 

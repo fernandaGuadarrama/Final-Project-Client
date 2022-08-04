@@ -4,7 +4,7 @@ export default function TextAbout(){
   return (
     <>
   <div className="d-flex justify-content-center">
-  <container className="containertext">
+  <div className="divtext">
     <h4>About us</h4>
     <p>We create a space to your future to grow, in our housing communities that elevate the lifestyle of our residents and enhance the urban fabric of our cities.
 
@@ -24,7 +24,7 @@ In collaboration with local designers, makers and artisans, we seek to create we
 We celebrate Mexico’s tradition of hospitality with extraordinary service and curated experiences that elevate the lifestyle of our residents.
 
 It's time for a better approach to rental housing in Mexico and we are  leading the way.</p>
-</container>
+</div>
 <br/>
 </div>
     </>

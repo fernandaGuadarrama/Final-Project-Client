@@ -36,24 +36,26 @@
 </details>
 <!-- ABOUT THE PROJECT -->
 ## About The Project
-The intention of Artempo Studio official website is to allow any interested artist to publish their art, either if there's sculptures, booknooks, personalizations of certain work of art, etcetera...
+This project helps real estate development companies that encompass activities that range from the renovation and re-lease of existing buildings to the purchase of raw land and sale of developed land or parcels to others.
+Since a real estate developers are the people and companies who coordinate all of these activities, converting ideas from paper to real property, "Build your home, own your future", simulates how a page of a real stater would work if they offer to buyers the possibility to see the development or progress in the construction of their properties while they buy them on a pre-sale.
+This app allows the client to see how their investments are, and offers to the companie a plus over their sells.
 <p align="right">(<a href="#top">back to top</a>)</p>
 ### Built With
 * [Node.js](https://nodejs.org/en/)
 * [React.js](https://reactjs.org/)
 * [Express.js](https://expressjs.com/es/)
-* [TailwindCSS](https://tailwindui.com/)
+* [MDBootstrap](https://mdbootstrap.com/docs/react/)
 * [MongoDB](https://www.mongodb.com/)
 <p align="right">(<a href="#top">back to top</a>)</p>
 ## Getting Started
 ### Installation
 1. Clone the client repo
    ```sh
-   git clone https://github.com/romibernard/art-client.git
+   git clone https://github.com/fernandaGuadarrama/Final-project
    ```
 2. Clone the server repo
    ```sh
-   git clone https://github.com/romibernard/art-server.git
+   git clone 
    ```
 3. Install NPM packages in **client** folder
    ```sh
@@ -63,9 +65,9 @@ The intention of Artempo Studio official website is to allow any interested arti
    ```sh
    npm install dotenv bcryptjs cors express express-validator jsonwebtoken mongoose nodemon
    ```
-5. Install **Tailwind CSS** in **client** folder, following the steps from:
+5. Install **MDBootstrap** in **client** folder, following the steps from:
    ```js
-   https://tailwindcss.com/docs/guides/create-react-app
+   https://mdbootstrap.com/docs/react/
    ```
 6. For you to be able to see both folders in your local server while running **npm run dev** in your terminal, remember to add the script in the server's `package.json`:
     ```js
@@ -73,8 +75,8 @@ The intention of Artempo Studio official website is to allow any interested arti
     ```
 <p align="right">(<a href="#top">back to top</a>)</p>
 ## Usage
-# Artempo Studio - galería virtual
-If you want to collaborate, the pull requests are available or if you want to publish your artwork feel free to access through: `https://artempo-studio.netlify.app/` creating you account, creating your "obra" and add at the form your contact info to make available the contact for purchase.
+# Build your home, own your future
+If you want to collaborate, the pull requests are available.
 <p align="right">(<a href="#top">back to top</a>)</p>
 ## Contributing
 Contributions are what make the open source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
@@ -87,20 +89,12 @@ Don't forget to give the project a star! Thanks again!
 5. Open a Pull Request
 <p align="right">(<a href="#top">back to top</a>)</p>
 ## Contact
-Instagram - [@developer.path](https://www.instagram.com/developer.path/)
-Project Link: [https://artempo-studio.netlify.app/](https://artempo-studio.netlify.app/)
+LinkedIn - [Fernanda Guadarrama](https://www.linkedin.com/in/fernanda-guadarrama-950510160/)
+Facebook: [Facebook](https://www.facebook.com/fernandaguadarrama10?ref=tn_tnmn)
+Instagram - [@fernandaguadarram](https://www.instagram.com/fernandaguadarrama/)
+Twitter - [@Pau_Rawr](https://twitter.com/Pau_Rawr)
 <p align="right">(<a href="#top">back to top</a>)</p>
-<!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
-[forks-shield]: https://img.shields.io/github/forks/github_username/repo_name.svg?style=for-the-badge
-[forks-url]: https://github.com/romibernard/art-client/network/members
-[stars-shield]: https://img.shields.io/github/stars/romibernard/art-client.svg?style=for-the-badge
-[stars-url]: https://github.com/romibernard/art-client/stargazers
-[linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
-[linkedin-url]: https://linkedin.com/in/romcarranza
-[product-screenshot]: ./../images/autor/preview.png
-## Learn More
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-To learn React, check out the [React documentation](https://reactjs.org/).
+
 You can see the dependencies installed in the `packaje.json` file in both folders for you to reinstall under the circumstance that it doesn't run.
-Happy coding  &&  || upload of your artwork!
-# art-client
+Happy coding  &&  || thanks for checking my repo.
+# Real State Web App
