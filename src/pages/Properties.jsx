@@ -1,5 +1,4 @@
-import React from 'react';
-import { useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
   import { Link } from "react-router-dom";
   import "../App.css";
 import {
@@ -35,7 +34,7 @@ export default function Properties(props) {
                         <br/>
                   <h4 className="mb-5" style={{color: "gray"}}><strong>OUR PROPERTIES</strong></h4>
                   <div className="row">
-                  {/* mapa para que mi arreglo se muestre para el detalle hago un componente*/}
+                  
                     {listProperties.map((Data) => {
                         console.log(Data)
                     return (
