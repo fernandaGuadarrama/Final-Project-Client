@@ -9,7 +9,6 @@ import TextAbout from "./textAbout";
 
 function HomePage(props) {
   const {user} = props; 
-  console.log("HP", props)
   return (
     <div>
         <HomeViews/>
@@ -18,7 +17,7 @@ function HomePage(props) {
         <br/>
         <TextAbout/>
         <br/>
-        <img src="/images/housesOF.png" className="img-fluid" alt="Responsive image"></img>
+        <img src="/images/housesOF.png" className="img-fluid" alt="Build you house, own your future"></img>
         <br/>
         <br/>
         <br/>
