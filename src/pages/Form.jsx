@@ -25,7 +25,11 @@ export default function Form() {
       },
       body: JSON.stringify({ Firstname, Lastname, email, phone, area}),
     })
-      .then((data) => data.json())
+      .then((data) => {
+        data.json()
+        setFirstname("")
+        setLastname("")
+      })
       .then(console.log)
       .catch(console.log);
 
@@ -33,7 +37,7 @@ export default function Form() {
 
   return (
     <>
-    <h3>Submit your information and receive a 10% discount on the house of your dreams</h3>
+    <h2 style={{textColor: "black"}}>Submit your information and receive a 10% discount on the house of your dreams</h2>
     <br/>
     <h2>YOUR FUTURE IS AROUND THE CORNER!</h2>
     <br/>

@@ -15,6 +15,9 @@ h5{
   font-size: small;
   color: grey;
 }
+Link{
+  text-decoration: none;
+}
 body {
   margin: 0;
   font-family: 'Pathway Gothic One';

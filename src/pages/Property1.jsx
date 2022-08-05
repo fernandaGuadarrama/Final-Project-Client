@@ -11,7 +11,7 @@ import {
 } from 'mdb-react-ui-kit';
 import TimelinePage from './Timeline';
 
-
+// Hacer un map con key=id en la vista
 
 export default function Property1(props) {
   const {user} = props;

@@ -64,29 +64,28 @@ const Profile= (props) => {
                 
                   <div className="px-3">
                     <p className="mb-1 h5"><MDBIcon fas icon="city" /></p>
-                    <p className="small text-muted mb-0">1 Appartment</p>
+                    <p className="small text-muted mb-0"> Appartments</p>
                   </div>
                   <div>
                     <p className="mb-1 h5"><MDBIcon fas icon="home" /></p>
-                    <p className="small text-muted mb-0">1 house</p>
+                    <p className="small text-muted mb-0">Houses</p>
                   </div>
                 </div>
               </div>
               <div className="card-body p-4 text-black">
+              {user.role=="admin" &&( 
                 <div className="mb-5">
                   <h1 className="lead fw-normal mb-1">Investments under construction...</h1>
-                  <div className="p-4" style={{backgroundColor: "#f8f9fa"}}>
+                  <div className="p-4" >
                     <p className="font-italic mb-1">Nuevo Vallarta Beach House</p>
                     <p className="font-italic mb-0">Valle de Bravo Cabanna</p>
                   </div>
                 </div>
+                )}
           {/* Progress shown as cards for each property */}
                 <h5>Progress of your properties...</h5>
                 <br/>
-                <MDBAccordion initialActive={1}>
-      <MDBAccordionItem collapseId={1} headerTitle='Nuevo Vallarta'>
-
-                <MDBCard alignment='center'>
+              <MDBCard alignment='center'>
           <MDBCardHeader><h2>Nuevo Vallarta</h2></MDBCardHeader>
           <MDBCardBody>
             <MDBCardTitle><h3>House near the beach</h3></MDBCardTitle>
@@ -101,10 +100,9 @@ const Profile= (props) => {
           </MDBCardBody>
           <MDBCardFooter className='text-muted'>Updated: 10 days ago</MDBCardFooter>
         </MDBCard>
-        </MDBAccordionItem>
         <br/>
         <br/>
-        <MDBAccordionItem collapseId={2} headerTitle='Valle de Bravo'>
+        
                 <MDBCard alignment='center'>
           <MDBCardHeader><h2>Valle de Bravo</h2></MDBCardHeader>
           <MDBCardBody>
@@ -120,8 +118,7 @@ const Profile= (props) => {
           </MDBCardBody>
           <MDBCardFooter className='text-muted'>Updated: 20 days ago</MDBCardFooter>
         </MDBCard>
-        </MDBAccordionItem>
-        </MDBAccordion>
+        
 
                 <br/>
                 <div className="d-flex justify-content-between align-items-center mb-4">
