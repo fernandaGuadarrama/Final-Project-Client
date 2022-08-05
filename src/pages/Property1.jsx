@@ -52,10 +52,6 @@ const PropertyDetail = () => {
         .catch(console.log)
       };
       return (
-    // <>
-    //   {listProperties.map((Data) => {
-    // console.log(Data)
-    // return(
       <>
     properties {properties._id}
                       {properties.title}
