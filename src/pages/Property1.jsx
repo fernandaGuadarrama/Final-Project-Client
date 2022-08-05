@@ -12,18 +12,20 @@ import {
 import TimelinePage from './Timeline';
 
 const PropertyDetail = () => {
-  const {propertiesId} = useParams();
+  const {propertyId} = useParams();
   const {id} = useParams();
   const {value, setValue} = useState();
   const {propertiesData, setPropertiesData} = useState();
-  const [properties, setProperties] = useState("");
+  const [properties, setProperties] = useState({});
+  console.log(useParams())
 
   useEffect(() => {
       //Conect with the server (post)
-      fetch(`${process.env.REACT_APP_SERVER_URL}/properties/${propertiesId}`)
+      fetch(`${process.env.REACT_APP_SERVER_URL}/properties/${propertyId}`)
         .then((Data) => Data.json())
         .then((properties) => {
-          setProperties(propertiesData);
+          console.log(properties)
+          setProperties(properties);
         })
         .catch(console.log);
     }, [ ]);
@@ -36,7 +38,7 @@ const PropertyDetail = () => {
 
       const handleSubmit = (e) => {
         e.preventDefault();
-        fetch(`${process.env.REACT_APP_SERVER_URL}/properties/${propertiesId}`, {
+        fetch(`${process.env.REACT_APP_SERVER_URL}/properties/${propertyId}`, {
           method: "PUT",
           headers: {
             "Content-Type": "application/json",
@@ -46,7 +48,6 @@ const PropertyDetail = () => {
         .then((Data) => Data.json())
         .then((propertiesData) => {
           console.log(propertiesData)
-          console.log(properties.id)
         }) 
         .catch(console.log)
       };
@@ -56,16 +57,16 @@ const PropertyDetail = () => {
     // console.log(Data)
     // return(
       <>
-    properties {properties.id}
+    properties {properties._id}
                       {properties.title}
     
     <MDBCard background='dark' className='text-white' style={{margin:"3%"}}>
-      <MDBCardImage overlay src='/images/Nuevo-Vallarta.jpg' alt='...' />
+      <MDBCardImage overlay src={properties.photos} alt='...' />
       <MDBCardOverlay>
       <br/>
         <MDBCardTitle><h4>Get to know our properties in Nuevo Vallarta </h4></MDBCardTitle>
         <MDBCardText>
-        <h1>Nuevo Vallarta</h1> 
+        <h1>{properties.title}</h1> 
         <br/>
         </MDBCardText>
         <MDBCardText><h3>Last 3 units</h3></MDBCardText>
@@ -77,8 +78,8 @@ const PropertyDetail = () => {
               <br/>
               <div style={{paddingLeft: '5%', paddingRight: '5%'}}>
                 <MDBProgress height='40' >
-                    <MDBProgressBar striped bgColor='dark' width='25' valuemin={0} valuemax={100}>
-                        25% {properties.progress}
+                    <MDBProgressBar striped bgColor='dark' width={properties.progress} valuemin={0} valuemax={100}>
+                         {properties.progress}%
                     </MDBProgressBar>
                 </MDBProgress>
                 </div>

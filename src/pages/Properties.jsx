@@ -53,7 +53,7 @@ export default function Properties(props) {
                                   {Data.description}
                                 </p>
                                 { user && (
-                                <Link to="/property1" className="btn btn-dark">See the development</Link>)}
+                                <Link to={`/property1/${Data._id}`} className="btn btn-dark">See the development</Link>)}
                             </div>
                           </div>
                     </div>

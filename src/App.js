@@ -83,7 +83,7 @@ export default function App() {
         <Route path="/auth/signup" element={<Signup authenticate={authenticate}/>}/>
         <Route path="/properties" element={<Properties user={user} addproperty={addproperty}/>}/>
         <Route path="/profile" element={<Profile user={user}/>} />
-        <Route path="/property1" element={<Property1/>}/>
+        <Route path="/property1/:propertyId" element={<Property1/>}/>
         <Route path="/admin" element={<Admin/>}/>
         <Route path="/Addproperty" element={<Addproperty/>}/>
       </Routes>
